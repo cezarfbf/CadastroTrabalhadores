@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SstTesteModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TRABALHADOR">
+          <Key>
+            <PropertyRef Name="cd_trabalhador" />
+          </Key>
+          <Property Name="cd_trabalhador" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tx_nome_func" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="dt_nasc_func" Type="datetime" Nullable="false" />
+          <Property Name="tx_sexo_func" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="id_estado_civil_func" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="tx_end_func" Type="varchar" MaxLength="80" />
+          <Property Name="cd_municipio" Type="int" />
+          <Property Name="tx_bairro_func" Type="varchar" MaxLength="40" />
+          <Property Name="tx_telefone_func" Type="varchar" MaxLength="25" />
+          <Property Name="tx_email_func" Type="varchar" MaxLength="50" />
+          <Property Name="tx_cep_func" Type="varchar" MaxLength="10" />
+          <Property Name="tx_br_pdh_func" Type="varchar" MaxLength="5" />
+          <Property Name="tx_nit_func" Type="varchar" MaxLength="25" />
+          <Property Name="nr_ctps_func" Type="varchar" MaxLength="10" />
+          <Property Name="nr_serie_ctps_func" Type="varchar" MaxLength="10" />
+          <Property Name="tx_uf_ctps_func" Type="char" MaxLength="2" />
+          <Property Name="tx_cpf_func" Type="varchar" MaxLength="15" />
+          <Property Name="dt_admissao_func" Type="datetime" />
+          <Property Name="dt_demissao_func" Type="datetime" />
+          <Property Name="dt_cadastro_func" Type="datetime" Nullable="false" />
+          <Property Name="cd_faixa_salarial" Type="int" />
+          <Property Name="cd_escolaridade" Type="int" />
+          <Property Name="cd_raca" Type="int" />
+          <Property Name="tx_rg_func" Type="varchar" MaxLength="20" />
+          <Property Name="tx_prontuario" Type="varchar" MaxLength="50" />
+          <Property Name="tx_orgao_emissor" Type="varchar" MaxLength="10" />
+          <Property Name="tx_telefone_celular" Type="varchar" MaxLength="25" />
+          <Property Name="dt_falecimento" Type="datetime" />
+          <Property Name="dt_afastamento" Type="datetime" />
+          <Property Name="dt_previsao_retorno" Type="datetime" />
+          <Property Name="dt_retorno_trabalho" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="SstTesteModelStoreContainer">
+          <EntitySet Name="TRABALHADOR" EntityType="Self.TRABALHADOR" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SstTesteModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TRABALHADOR">
+          <Key>
+            <PropertyRef Name="cd_trabalhador" />
+          </Key>
+          <Property Name="cd_trabalhador" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tx_nome_func" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="dt_nasc_func" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="tx_sexo_func" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="id_estado_civil_func" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="tx_end_func" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="cd_municipio" Type="Int32" />
+          <Property Name="tx_bairro_func" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="tx_telefone_func" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="tx_email_func" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="tx_cep_func" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="tx_br_pdh_func" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="tx_nit_func" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="nr_ctps_func" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="nr_serie_ctps_func" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="tx_uf_ctps_func" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="tx_cpf_func" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="dt_admissao_func" Type="DateTime" Precision="3" />
+          <Property Name="dt_demissao_func" Type="DateTime" Precision="3" />
+          <Property Name="dt_cadastro_func" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="cd_faixa_salarial" Type="Int32" />
+          <Property Name="cd_escolaridade" Type="Int32" />
+          <Property Name="cd_raca" Type="Int32" />
+          <Property Name="tx_rg_func" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="tx_prontuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="tx_orgao_emissor" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="tx_telefone_celular" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="dt_falecimento" Type="DateTime" Precision="3" />
+          <Property Name="dt_afastamento" Type="DateTime" Precision="3" />
+          <Property Name="dt_previsao_retorno" Type="DateTime" Precision="3" />
+          <Property Name="dt_retorno_trabalho" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="EmployeeModel" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TRABALHADORs" EntityType="Self.TRABALHADOR" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SstTesteModelStoreContainer" CdmEntityContainer="EmployeeModel">
+          <EntitySetMapping Name="TRABALHADORs">
+            <EntityTypeMapping TypeName="SstTesteModel.TRABALHADOR">
+              <MappingFragment StoreEntitySet="TRABALHADOR">
+                <ScalarProperty Name="cd_trabalhador" ColumnName="cd_trabalhador" />
+                <ScalarProperty Name="tx_nome_func" ColumnName="tx_nome_func" />
+                <ScalarProperty Name="dt_nasc_func" ColumnName="dt_nasc_func" />
+                <ScalarProperty Name="tx_sexo_func" ColumnName="tx_sexo_func" />
+                <ScalarProperty Name="id_estado_civil_func" ColumnName="id_estado_civil_func" />
+                <ScalarProperty Name="tx_end_func" ColumnName="tx_end_func" />
+                <ScalarProperty Name="cd_municipio" ColumnName="cd_municipio" />
+                <ScalarProperty Name="tx_bairro_func" ColumnName="tx_bairro_func" />
+                <ScalarProperty Name="tx_telefone_func" ColumnName="tx_telefone_func" />
+                <ScalarProperty Name="tx_email_func" ColumnName="tx_email_func" />
+                <ScalarProperty Name="tx_cep_func" ColumnName="tx_cep_func" />
+                <ScalarProperty Name="tx_br_pdh_func" ColumnName="tx_br_pdh_func" />
+                <ScalarProperty Name="tx_nit_func" ColumnName="tx_nit_func" />
+                <ScalarProperty Name="nr_ctps_func" ColumnName="nr_ctps_func" />
+                <ScalarProperty Name="nr_serie_ctps_func" ColumnName="nr_serie_ctps_func" />
+                <ScalarProperty Name="tx_uf_ctps_func" ColumnName="tx_uf_ctps_func" />
+                <ScalarProperty Name="tx_cpf_func" ColumnName="tx_cpf_func" />
+                <ScalarProperty Name="dt_admissao_func" ColumnName="dt_admissao_func" />
+                <ScalarProperty Name="dt_demissao_func" ColumnName="dt_demissao_func" />
+                <ScalarProperty Name="dt_cadastro_func" ColumnName="dt_cadastro_func" />
+                <ScalarProperty Name="cd_faixa_salarial" ColumnName="cd_faixa_salarial" />
+                <ScalarProperty Name="cd_escolaridade" ColumnName="cd_escolaridade" />
+                <ScalarProperty Name="cd_raca" ColumnName="cd_raca" />
+                <ScalarProperty Name="tx_rg_func" ColumnName="tx_rg_func" />
+                <ScalarProperty Name="tx_prontuario" ColumnName="tx_prontuario" />
+                <ScalarProperty Name="tx_orgao_emissor" ColumnName="tx_orgao_emissor" />
+                <ScalarProperty Name="tx_telefone_celular" ColumnName="tx_telefone_celular" />
+                <ScalarProperty Name="dt_falecimento" ColumnName="dt_falecimento" />
+                <ScalarProperty Name="dt_afastamento" ColumnName="dt_afastamento" />
+                <ScalarProperty Name="dt_previsao_retorno" ColumnName="dt_previsao_retorno" />
+                <ScalarProperty Name="dt_retorno_trabalho" ColumnName="dt_retorno_trabalho" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
